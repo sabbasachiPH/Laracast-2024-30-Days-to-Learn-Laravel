@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
+use App\Models\Job;
+
 
 Route::get('/', function () {
     return view('home', [
@@ -10,65 +12,15 @@ Route::get('/', function () {
     ]);
 });
 
+
 Route::get('/jobs', function () {
     return view('jobs', [
-        'jobs' => [
-            [
-                'id' => '1',
-                'title' => 'Web Developer',
-                'salary' => '100,000'
-            ],
-            [
-                'id' => '2',
-                'title' => 'Full Stack Web Developer',
-                'salary' => '200,000'
-            ],
-            [
-                'id' => '3',
-                'title' => 'Software Engineer',
-                'salary' => '300,000'
-            ],
-            [
-                'id' => '4',
-                'title' => 'Project Manager',
-                'salary' => '400,000'
-            ]
-        ]
+        'jobs' => Job::all(),
     ]);
 });
 
 Route::get('/job/{id}', function ($id) {
-    $jobs = [
-        [
-            'id' => '1',
-            'title' => 'Web Developer',
-            'salary' => '100,000'
-        ],
-        [
-            'id' => '2',
-            'title' => 'Full Stack Web Developer',
-            'salary' => '200,000'
-        ],
-        [
-            'id' => '3',
-            'title' => 'Software Engineer',
-            'salary' => '300,000'
-        ],
-        [
-            'id' => '4',
-            'title' => 'Project Manager',
-            'salary' => '400,000'
-        ]
-    ];
-
-    // \Illuminate\Support\Arr::first($jobs, function ($job) use ($id) {
-    //     return $job['id'] === $id;
-    // });
-
-    // Alternative way write above function is using shorthand array function
-
-    $job = \Illuminate\Support\Arr::first($jobs, fn ($job) => $job['id'] === $id);
-
+    $job = Job::find($id);
     return view('job', ['job' => $job]);
 });
 
