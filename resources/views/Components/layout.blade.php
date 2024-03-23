@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <script src="https://cdn.tailwindcss.com">
-    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="h-full">
@@ -97,7 +97,7 @@
                 <div class="border-t border-gray-700 pb-3 pt-4">
                     <div class="flex items-center px-5">
                         <div class="flex-shrink-0">
-                            <img class="h-10 w-10 rounded-full" src="images/rsz_50132.jpg" alt="">
+                            <img class="h-10 w-10 rounded-full" src="/images/rsz_50132.jpg" alt="">
                         </div>
                         <div class="ml-3">
                             <div class="text-base font-medium leading-none text-white">Sabbasachi Saha</div>
