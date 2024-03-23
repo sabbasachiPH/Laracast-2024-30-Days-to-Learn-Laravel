@@ -1,3 +1,8 @@
-# Day-08
+# Day-09
 
-## Migration in Laravel Intro
+## Meet Eloquent
+
+-   Eloquent is a ORM(Object Relational Mapper)
+
+` php artisan tinker`
+` php artisan help make`
