@@ -1,8 +1,10 @@
-# Day-09
+Day-10
+================================================================
 
-## Meet Eloquent
+Model Factories
+----------------------------------------------------------------
 
 -   Eloquent is a ORM(Object Relational Mapper)
 
-` php artisan tinker`
+` php artisan tinker`  
 ` php artisan help make`
