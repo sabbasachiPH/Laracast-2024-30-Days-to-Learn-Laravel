@@ -8,7 +8,7 @@
 -   Eloquent is a ORM(Object Relational Mapper)
 -   ` git push --set-upstream origin class-11`
     > ` php artisan tinker`  
-    > ` php artisan help make` > ` php artisan make:model Employer -f -m`  
-    > ` php artisan help  make:factory`  
-    > ` $table->foreignIdFor(App\Models\Employer::class);`  
+    > ` $job = App\Models\Job::first();  `  
+    > ` $job->employer->name; `  
+    > ` $employer = App\Models\Employer::first();`  
     > ` php artisan migrate:fresh` > `App\Models\Job::factory(300)->create()`
