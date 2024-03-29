@@ -1,18 +1,7 @@
-# Day-12
+# Day-13
 
-## Pivot Tables and BelongsToMany Relationships
+## Eager Loading and the N+1 Problem
 
-> The next key Eloquent relationship type to understand is belongsToMany(). You will reach for this type whenever you're working with pivot tables. We'll use the example of jobs and tags to illustrate the basic concept.
+> Lazy loading is useful, but, if you're not careful, it can lead to some nasty performance issues. In this episode, we'll discuss the N+1 problem and how to avoid it by leveraging eager loading.
 
--   `git push --set-upstream origin Class-12`
-
-> `php artisan make:model Tag -mf` > `php artisan migrate:rollback && php artisan migrate`
-
--   To turn on Foreign Key cascade on delete feature on SQLite database creation  
-    `PRAGMA foreign_keys = ON`
-
--   If the foreign key column is different then the convention then explicitly declare the foreign key column name
-
-> -   `return $this->belongsToMany(Tag::class, foreignPivotKey: 'job_listing_id');`
-
--   `return $this->belongsToMany(Job::class, relatedPivotKey:'job_listing_key');`
+-
