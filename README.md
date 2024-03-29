@@ -1,14 +1,7 @@
-# Day-11
+# Day-12
 
-## Two Key Eloquent Relationship Types
+## Pivot Tables and BelongsToMany Relationships
 
-> For day 11, we'll focus exclusively on two Eloquent relationship types: belongsTo() and hasMany(). As you'll quickly find, these two will take you a very, very long way.
+> The next key Eloquent relationship type to understand is belongsToMany(). You will reach for this type whenever you're working with pivot tables. We'll use the example of jobs and tags to illustrate the basic concept.
 
--   `App\Models\Job::factory(300)->create()`
--   Eloquent is a ORM(Object Relational Mapper)
--   ` git push --set-upstream origin class-11`
-    > ` php artisan tinker`  
-    > ` $job = App\Models\Job::first();  `  
-    > ` $job->employer->name; `  
-    > ` $employer = App\Models\Employer::first();`  
-    > ` php artisan migrate:fresh` > `App\Models\Job::factory(300)->create()`
+-   ``
