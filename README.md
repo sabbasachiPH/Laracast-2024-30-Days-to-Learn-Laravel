@@ -14,6 +14,6 @@
 ` Job::factory(200)->create();`
 
 -   Call JobSeeder from Database seeder
-    `   php artisan migrate:fresh --seed`
 
-    `   $this->call(JobSeeder::class);`
+    `   $this->call(JobSeeder::class);`  
+     `   php artisan migrate:fresh --seed`
