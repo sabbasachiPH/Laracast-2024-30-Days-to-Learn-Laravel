@@ -1,21 +1,21 @@
-# Day-14
+# Day-15
 
-## All You Need to Know About Pagination
+## Understanding Database Seeders
 
-> Today, we move on to the topic of pagination. Up until this point, we've been fetching every record from the database. But that's hardly appropriate in most situations. Let's fix that!
+> What happens when we refresh our migrations, and then lose all of our records within the database? Do we have to manually run all of those factories again? Absolutely not. Instead, we can read for database seeders.
 
-### For configuring Bootstrap Pagination
+###
 
-> In laravel default pagination is based on Tailwind CSS. To configure bootstrap first run the following command in terminal.
+-   Import Job Model in JobSeeder file
+    `use App\Models\Job;`
 
-` php artisan vendor:publish`
+-   Generate data in jobseeder
 
--   select laravel pagination.
--   Goto your appservice provider file
+` Job::factory(200)->create();`
 
-`
-use Illuminate\Pagination\Paginator as Paginator;
+-   Call JobSeeder from Database seeder
+    ` php artisan migrate:fresh --seed
 
-    Paginator::useBootstrapFive();
+        $this->call(JobSeeder::class);
 
 `

@@ -15,9 +15,9 @@ Route::get('/', function () {
 
 Route::get('/jobs', function () {
     // $jobs = Job::with('employer')->get(); //Eager Loading
-    // $jobs = Job::with('employer')->paginate(3); //Eager Loading
+    $jobs = Job::with('employer')->paginate(3); //Eager Loading
     // $jobs = Job::with('employer')->simplePaginate(3); //Eager Loading
-    $jobs = Job::with('employer')->cursorPaginate(3); //Eager Loading
+    // $jobs = Job::with('employer')->cursorPaginate(3); //Eager Loading
 
     return view('jobs', [
         'jobs' => $jobs,
