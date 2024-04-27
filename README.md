@@ -1,7 +1,20 @@
-# Day-13
+# Day-14
 
-## Eager Loading and the N+1 Problem
+## All You Need to Know About Pagination
 
-> Lazy loading is useful, but, if you're not careful, it can lead to some nasty performance issues. In this episode, we'll discuss the N+1 problem and how to avoid it by leveraging eager loading.
+> Today, we move on to the topic of pagination. Up until this point, we've been fetching every record from the database. But that's hardly appropriate in most situations. Let's fix that!
 
--
+### For configuring Bootstrap Pagination
+
+> In laravel default pagination is based on Tailwind CSS. To configure bootstrap first run the following command in terminal.
+
+` php artisan vendor:publish`
+
+-   select laravel pagination.
+-   Goto your appservice provider file
+
+` use Illuminate\Pagination\Paginator as Paginator;
+
+    Paginator::useBootstrapFive();
+
+`
