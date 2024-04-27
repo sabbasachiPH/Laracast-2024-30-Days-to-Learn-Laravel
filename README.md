@@ -13,7 +13,8 @@
 -   select laravel pagination.
 -   Goto your appservice provider file
 
-` use Illuminate\Pagination\Paginator as Paginator;
+`
+use Illuminate\Pagination\Paginator as Paginator;
 
     Paginator::useBootstrapFive();
 
