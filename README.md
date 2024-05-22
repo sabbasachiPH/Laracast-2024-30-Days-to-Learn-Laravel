@@ -1,19 +1,12 @@
-# Day-15
+# Day-16
 
-## Understanding Database Seeders
+## Forms and CSRF Explained (with Examples)
 
-> What happens when we refresh our migrations, and then lose all of our records within the database? Do we have to manually run all of those factories again? Absolutely not. Instead, we can read for database seeders.
+> About This Episode
+> Published Apr 3rd, 2024
+
+> We finally get to discuss forms. However, in order to do so, we also must review a confusing topic: Cross-Site Request Forgery (CSRF)
 
 ###
 
--   Import Job Model in JobSeeder file
-    `use App\Models\Job;`
-
--   Generate data in jobseeder
-
-` Job::factory(200)->create();`
-
--   Call JobSeeder from Database seeder
-
-    `   $this->call(JobSeeder::class);`  
-     `   php artisan migrate:fresh --seed`
+-   CSRF === Cross-Site Request Forgery

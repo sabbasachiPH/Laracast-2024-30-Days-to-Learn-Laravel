@@ -14,19 +14,33 @@ Route::get('/', function () {
 
 
 Route::get('/jobs', function () {
-    // $jobs = Job::with('employer')->get(); //Eager Loading
-    $jobs = Job::with('employer')->paginate(3); //Eager Loading
-    // $jobs = Job::with('employer')->simplePaginate(3); //Eager Loading
-    // $jobs = Job::with('employer')->cursorPaginate(3); //Eager Loading
+    $jobs = Job::with('employer')->latest()->simplePaginate(3); //Eager Loading
 
-    return view('jobs', [
+    return view('jobs.index', [
         'jobs' => $jobs,
     ]);
 });
 
+Route::get('/jobs/create', function () {
+    return view('jobs.create');
+});
+
 Route::get('/job/{id}', function ($id) {
     $job = Job::find($id);
-    return view('job', ['job' => $job]);
+    return view('job.show', ['job' => $job]);
+});
+
+
+Route::post('/jobs', function () {
+    //validation check will be written here. dd(request()->all());
+
+    Job::create([
+        'title' => request('title'),
+        'salary' => request('salary'),
+        'employer_id' => 1
+    ]);
+
+    return redirect('/jobs');
 });
 
 Route::get('/about', function () {
