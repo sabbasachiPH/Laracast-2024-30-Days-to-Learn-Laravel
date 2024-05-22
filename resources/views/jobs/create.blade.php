@@ -5,7 +5,7 @@
 
     <form method="POST" action="/jobs">
         @csrf
-        
+
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Create a new Job</h2>
@@ -19,8 +19,11 @@
                                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                                 <input type="text" name="title" id="title"
                                     class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                                    placeholder="Shift Leader">
+                                    placeholder="Shift Leader" required>
                             </div>
+                            @error('title')
+                            <p class="text-sm text-red-500 font-semibold">{{$message}}</p>
+                            @enderror
                         </div>
                     </div>
 
@@ -31,8 +34,11 @@
                                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                                 <input type="text" name="salary" id="salary"
                                     class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                                    placeholder="$80,000">
+                                    placeholder="$80,000" required>
                             </div>
+                            @error('salary')
+                            <p class="text-sm text-red-500 font-semibold">{{$message}}</p>
+                            @enderror
                         </div>
                     </div>
                 </div>
