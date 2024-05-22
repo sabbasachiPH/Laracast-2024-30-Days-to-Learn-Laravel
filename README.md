@@ -1,13 +1,13 @@
-# Day-18
+# Day-19
 
-## Editing, Updating, and Deleting a Resource
+## Routes Reloaded - 6 Essential Tips
 
 > About This Episode
-> Published Apr 8th, 2024
+> Published Apr 10th, 2024
 
-> In this episode, you'll learn how to prepare the appropriate markup and routing to handle the process of editing, updating, and deleting a record.
+> Let's return to our routes file. In this episode, I have six essential routing tips that you should be aware of. You'll learn about implicit model binding, route resources, listing your routes, and more.
 
-### CRUD stands for
+### Complete CRUD in Laravel-11
 
 -   Create
 -   Read
