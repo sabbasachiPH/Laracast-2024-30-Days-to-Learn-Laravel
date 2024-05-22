@@ -1,11 +1,11 @@
-# Day-16
+# Day-17
 
-## Forms and CSRF Explained (with Examples)
+## Always Validate. Never Trust the User.
 
 > About This Episode
-> Published Apr 3rd, 2024
+> Published Apr 5th, 2024
 
-> We finally get to discuss forms. However, in order to do so, we also must review a confusing topic: Cross-Site Request Forgery (CSRF)
+> So far, we've taken the happy path. But that just won't do in real life. No we must always assume that the user is malicious. For this reason, both client and server-side validation is a must.
 
 ###
 
